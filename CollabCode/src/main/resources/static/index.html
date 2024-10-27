@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Code Editor</title>
+
+</head>
+<body>
+<h1>Collaborative Code Editor</h1>
+
+<!-- Create Room -->
+<div>
+    <h2>Create Room</h2>
+    <input type="text" id="owner" placeholder="Enter your username">
+    <button id="create-room">Create Room</button>
+</div>
+
+<!-- Join Room -->
+<div>
+    <h2>Join Room</h2>
+    <input type="text" id="id" placeholder="Room ID">
+    <input type="text" id="uuid" placeholder="Room uuid">
+    <input type="text" id="roomKey" placeholder="Room Key">
+    <button id="join-room">Join Room</button>
+</div>
+
+
+<!-- Files Section -->
+<div id="files-section" style="display:none;">
+    <h2>Files</h2>
+
+    <!-- Create File -->
+    <input type="text" id="fileName" placeholder="Enter File Name">
+    <button id="create-file">Create File</button>
+
+    <!-- Load Existing Files -->
+    <button id="load-files">Load Existing Files</button>
+
+    <!-- File List -->
+    <div id="file-list"></div>
+
+    <!-- Open File -->
+    <input type="text" id="fileId" placeholder="Enter File ID to Open">
+    <button id="open-file">Open File</button>
+
+
+    <h3>Editor</h3>
+    <textarea id="code-editor" rows="20" cols="80" placeholder="Write your code here..."></textarea>
+    <button id="save-code">Save Code</button>
+    <button id="run-code">Run Code</button>
+    <h3>Output</h3>
+    <pre id="terminal-output"></pre>
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>

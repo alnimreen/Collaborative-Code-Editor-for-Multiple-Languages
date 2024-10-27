@@ -1,0 +1,287 @@
+/* Main Container */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar for Role Assignment */
+.sidebar {
+  width: 300px;
+  background-color: #3a3a3a;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Files Section */
+.filesContainer {
+  margin-bottom: 20px;
+}
+
+.filesList {
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  gap: 10px; /* Adds spacing between items */
+  margin: 0;
+}
+
+.fileItem {
+  background-color: #3a3a3a;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  width: 150px; /* Fixed width for file items */
+  display: flex;
+  justify-content: space-between; /* Aligns buttons on opposite sides */
+}
+/* Other existing styles... */
+
+/* Smaller File Item Buttons */
+.fileItem button {
+  padding: 5px 10px; /* Smaller padding */
+  font-size: 10px; /* Smaller font size */
+  background-color: #058728; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px; /* Add space between buttons */
+}
+
+.fileItem button:hover {
+  background-color: #046b20; /* Darker green on hover */
+}
+
+
+.fileItem:hover {
+  background-color: #3a3a3a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* File Actions */
+.fileActions {
+  margin-bottom: 20px;
+}
+
+.fileActions input {
+  width: 100%; /* Full width for input fields */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Upload File Section */
+.uploadFile {
+  margin-bottom: 20px;
+}
+
+/* Clone, Fork, Merge Section */
+.cloneForkMerge {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  margin-top: 20px;
+}
+
+.cloneForkContainer {
+  display: flex;
+  justify-content: space-between; /* Aligns items in a row */
+  margin-top: 10px;
+}
+
+.cloneForkContainer div {
+  margin-right: 20px; /* Adds space between each group */
+}
+
+.cloneForkContainer h3 {
+  margin: 0; /* Remove margin for better alignment */
+}
+/* Main Container */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar for Role Assignment */
+.sidebar {
+  width: 300px;
+  background-color: #3a3a3a; /* Consider a subtle variation for visual interest */
+  padding: 15px; /* Increased padding for a better feel */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.sidebar  select {
+  background-color: #dbdbdb; /* Set background color to white */
+
+}
+/* Main Content */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  background-color: #3a3a3a; /* Ensure there's a contrasting background */
+  border-radius: 8px; /* Add rounded corners for a softer look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Files Section */
+.filesContainer {
+  margin-bottom: 20px;
+}
+
+/* File List */
+.filesList {
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  gap: 10px; /* Adds spacing between items */
+  margin: 0;
+}
+
+/* File Item */
+.fileItem {
+  background-color: #dbdbdb; /* Consistent background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px; /* Adjust padding for better item spacing */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  width: 150px; /* Fixed width for file items */
+  display: flex;
+  justify-content: space-between; /* Aligns buttons on opposite sides */
+}
+
+/* File Item Buttons */
+.fileItem button {
+  padding: 5px 10px; /* Smaller padding */
+  font-size: 10px; /* Smaller font size */
+  background-color: #058728; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px; /* Space between buttons */
+}
+
+.fileItem button:hover {
+  background-color: #046b20; /* Darker green on hover */
+}
+
+/* File Item Hover Effect */
+.fileItem:hover {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* File Actions */
+.fileActions {
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.fileActions input {
+  width: 100%; /* Full width for input fields */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #dbdbdb; /* Set background color to white */
+}
+
+/* Upload File Section */
+.uploadFile {
+  margin-bottom: 20px;
+  
+}
+/* Add this style to your existing CSS file */
+.uploadFile input[type="file"] {
+  background-color: #dbdbdb; /* Set background color to white */
+  border: 1px solid #ccc; /* Optional: Add a border */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  margin-bottom: 10px; /* Space below the input */
+  width: 100%; /* Ensure it takes full width */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+/* roomDetailsStyle.module.css */
+.errorMessage {
+  color: red;
+  background-color: #ffe5e5;
+  padding: 10px;
+  border: 1px solid red;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.successMessage {
+  color: green;
+  background-color: #e5ffe5;
+  padding: 10px;
+  border: 1px solid green;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Clone, Fork, Merge Section */
+.cloneForkMerge {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  margin-top: 20px;
+}
+
+/* Clone/Fork Container */
+.cloneForkContainer {
+  display: flex;
+  justify-content: space-between; /* Aligns items in a row */
+  margin-top: 10px;
+}
+/* Clone/Fork Container */
+.cloneForkContainer input {
+  background-color: #dbdbdb; /* Set background color to white */
+
+}
+.cloneForkContainer div {
+  margin-right: 20px; 
+  /* Adds space between each group */
+}
+
+.cloneForkContainer h3 {
+  color: white;
+
+  margin: 0; /* Remove margin for better alignment */
+}
+
+/* Consider adding media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sidebar and main content on small screens */
+  }
+  .sidebar {
+    width: 100%; /* Full width for sidebar */
+    margin-bottom: 20px; /* Space below sidebar */
+  }
+  .mainContent {
+    padding: 10px; /* Less padding on small screens */
+  }
+}

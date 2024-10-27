@@ -1,0 +1,136 @@
+.editorPage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    color: #fff;
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
+    height: 70vh;
+}
+
+body {
+    background-color: #525151;
+}
+
+.outputSection,
+.editorSection,
+.participantsSection {
+    background-color: #3a3a3a;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-y: auto;
+    border: 1px solid #000;
+}
+
+h2 {
+    color: #fff; /* White title for Editor and Participants */
+}
+
+textarea {
+    background-color: #525151;
+    color: #fff;
+    font-family: monospace;
+    border: none;
+    border-radius: 4px;
+    resize: none;
+    margin-top: 10px;
+}
+
+.actionButtons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.commentsSection {
+    background-color: #525151;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.commentItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.commentItem button {
+    background-color: #ff5555;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.commentItem button:hover {
+    background-color: #ff7777;
+}
+
+/* Add Comments Section: Increased height */
+.editorSection {
+    background-color: #3a3a3a;
+    padding: 20px; /* Increased padding for more space */
+    border-radius: 4px;
+    overflow-y: auto; /* Ensure overflow is managed */
+    border: 1px solid #000;
+    min-height: 260px; /* Set a minimum height for the section */
+}
+
+.editorSection h4 {
+    margin-top: 20px;
+}
+
+.editorSection textarea {
+    height: 120px; /* Make the textarea for adding comments bigger */
+}
+
+.versionsList {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #3a3a3a;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/* Small List Versions Button */
+button.listVersions {
+    padding: 6px 80px; /* Make the List Versions button smaller */
+    font-size: 20px;
+    background-color: #444;
+}
+.errorMessage {
+    color: red;
+    background-color: #ffe5e5;
+    padding: 10px;
+    border: 1px solid red;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .successMessage {
+    color: green;
+    background-color: #e5ffe5;
+    padding: 10px;
+    border: 1px solid green;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }

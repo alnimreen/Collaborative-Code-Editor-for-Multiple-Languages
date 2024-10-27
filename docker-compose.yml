@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+  java:
+    build:
+      context: ./CollabCode/Dockerfiles/java
+      dockerfile: Dockerfile
+    container_name: java-container
+    image: java-container:dev
+    networks:
+      - default
+
+  python:
+    build:
+      context: ./CollabCode/Dockerfiles/python
+      dockerfile: Dockerfile
+    container_name: python-container
+    image: python-container:dev
+    networks:
+      - default
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: on-failure
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=editor
+
+    networks:
+      - default
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 120s
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: on-failure
+    ports:
+      - "8081:8081" 
+    networks:
+      - default
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongodb:27017/editor  
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  spring-app:
+    build:
+      context: ./CollabCode  
+    container_name: spring-app
+    restart: on-failure
+    ports:
+      - "8082:8082" 
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/docker_code  
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/editor
+    networks:
+      - default
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  react-app:
+    build:
+      context: ./code-editor-frontend
+    container_name: react-app
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+    depends_on:
+      - spring-app
+
+volumes:
+  mongo-data:
+
+networks:
+  default:
+    driver: bridge

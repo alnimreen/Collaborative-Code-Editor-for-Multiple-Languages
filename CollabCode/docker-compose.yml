@@ -1,0 +1,21 @@
+services:
+  java:
+    build:
+      context: ./Dockerfiles/java
+      dockerfile: Dockerfile
+    container_name: java-con
+    image: java-container:dev
+    networks:
+      - default
+
+  python:
+    build:
+      context: ./Dockerfiles/python
+      dockerfile: Dockerfile
+    container_name: python-con
+    image: python-container:dev
+    networks:
+      - default
+networks:
+  default:
+    driver: bridge
